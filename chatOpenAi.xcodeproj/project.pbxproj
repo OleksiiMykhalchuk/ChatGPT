@@ -15,6 +15,19 @@
 		885272E42B7A42DF001DC7FA /* chatOpenAiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885272E32B7A42DF001DC7FA /* chatOpenAiTests.swift */; };
 		885272EE2B7A42DF001DC7FA /* chatOpenAiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885272ED2B7A42DF001DC7FA /* chatOpenAiUITests.swift */; };
 		885272F02B7A42DF001DC7FA /* chatOpenAiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885272EF2B7A42DF001DC7FA /* chatOpenAiUITestsLaunchTests.swift */; };
+		885272FE2B7A4480001DC7FA /* NetwokService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885272FD2B7A4480001DC7FA /* NetwokService.swift */; };
+		885273022B7A4DEB001DC7FA /* AppLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885273012B7A4DEB001DC7FA /* AppLogger.swift */; };
+		885273062B7A612E001DC7FA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885273052B7A612E001DC7FA /* MainView.swift */; };
+		885273092B7A71C5001DC7FA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885273082B7A71C5001DC7FA /* SettingsView.swift */; };
+		888DED6B2B8CFEEB002D16AB /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888DED6A2B8CFEEB002D16AB /* UserDefaultsService.swift */; };
+		88B281072B910508008C8046 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 88B281062B910508008C8046 /* MarkdownUI */; };
+		88B2810A2B910EE4008C8046 /* OpenAIResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B281092B910EE4008C8046 /* OpenAIResponseModel.swift */; };
+		88BA6CF12B89FAE80028C84A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA6CF02B89FAE80028C84A /* ViewModel.swift */; };
+		88BA6CF32B8A06660028C84A /* ChatBubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA6CF22B8A06660028C84A /* ChatBubbleShape.swift */; };
+		88BA6CF52B8A068D0028C84A /* ChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA6CF42B8A068D0028C84A /* ChatBubbleView.swift */; };
+		88BA6CF72B8A0E240028C84A /* FlippedUpsideDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA6CF62B8A0E240028C84A /* FlippedUpsideDown.swift */; };
+		88BA6CFA2B8A4B310028C84A /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA6CF92B8A4B310028C84A /* KeychainService.swift */; };
+		88BA6CFC2B8A4B450028C84A /* SwiftDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA6CFB2B8A4B450028C84A /* SwiftDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +60,18 @@
 		885272E92B7A42DF001DC7FA /* chatOpenAiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chatOpenAiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		885272ED2B7A42DF001DC7FA /* chatOpenAiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatOpenAiUITests.swift; sourceTree = "<group>"; };
 		885272EF2B7A42DF001DC7FA /* chatOpenAiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatOpenAiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		885272FD2B7A4480001DC7FA /* NetwokService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetwokService.swift; sourceTree = "<group>"; };
+		885273012B7A4DEB001DC7FA /* AppLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogger.swift; sourceTree = "<group>"; };
+		885273052B7A612E001DC7FA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		885273082B7A71C5001DC7FA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		888DED6A2B8CFEEB002D16AB /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
+		88B281092B910EE4008C8046 /* OpenAIResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIResponseModel.swift; sourceTree = "<group>"; };
+		88BA6CF02B89FAE80028C84A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		88BA6CF22B8A06660028C84A /* ChatBubbleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleShape.swift; sourceTree = "<group>"; };
+		88BA6CF42B8A068D0028C84A /* ChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleView.swift; sourceTree = "<group>"; };
+		88BA6CF62B8A0E240028C84A /* FlippedUpsideDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippedUpsideDown.swift; sourceTree = "<group>"; };
+		88BA6CF92B8A4B310028C84A /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		88BA6CFB2B8A4B450028C84A /* SwiftDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B281072B910508008C8046 /* MarkdownUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,9 +123,14 @@
 		885272CE2B7A42DE001DC7FA /* chatOpenAi */ = {
 			isa = PBXGroup;
 			children = (
+				88BA6CF82B8A4B150028C84A /* Persistance */,
+				88BA6CEF2B89FAD20028C84A /* ViewModel */,
+				885272FF2B7A4DC5001DC7FA /* Utility */,
+				885272FC2B7A4454001DC7FA /* Network */,
+				885273032B7A6113001DC7FA /* View */,
+				88B281082B910EBA008C8046 /* Model */,
+				88B2810B2B910F99008C8046 /* temp */,
 				885272CF2B7A42DE001DC7FA /* chatOpenAiApp.swift */,
-				885272D12B7A42DE001DC7FA /* ContentView.swift */,
-				885272D32B7A42DE001DC7FA /* Item.swift */,
 				885272D52B7A42DF001DC7FA /* Assets.xcassets */,
 				885272DA2B7A42DF001DC7FA /* chatOpenAi.entitlements */,
 				885272D72B7A42DF001DC7FA /* Preview Content */,
@@ -132,6 +163,85 @@
 			path = chatOpenAiUITests;
 			sourceTree = "<group>";
 		};
+		885272FC2B7A4454001DC7FA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				885272FD2B7A4480001DC7FA /* NetwokService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		885272FF2B7A4DC5001DC7FA /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				885273012B7A4DEB001DC7FA /* AppLogger.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		885273032B7A6113001DC7FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				885273072B7A718C001DC7FA /* Settings */,
+				885273042B7A611D001DC7FA /* MainView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		885273042B7A611D001DC7FA /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				885273052B7A612E001DC7FA /* MainView.swift */,
+				88BA6CF62B8A0E240028C84A /* FlippedUpsideDown.swift */,
+				88BA6CF22B8A06660028C84A /* ChatBubbleShape.swift */,
+				88BA6CF42B8A068D0028C84A /* ChatBubbleView.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		885273072B7A718C001DC7FA /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				885273082B7A71C5001DC7FA /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		88B281082B910EBA008C8046 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88B281092B910EE4008C8046 /* OpenAIResponseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		88B2810B2B910F99008C8046 /* temp */ = {
+			isa = PBXGroup;
+			children = (
+				885272D12B7A42DE001DC7FA /* ContentView.swift */,
+				885272D32B7A42DE001DC7FA /* Item.swift */,
+			);
+			path = temp;
+			sourceTree = "<group>";
+		};
+		88BA6CEF2B89FAD20028C84A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				88BA6CF02B89FAE80028C84A /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		88BA6CF82B8A4B150028C84A /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				88BA6CF92B8A4B310028C84A /* KeychainService.swift */,
+				88BA6CFB2B8A4B450028C84A /* SwiftDataService.swift */,
+				888DED6A2B8CFEEB002D16AB /* UserDefaultsService.swift */,
+			);
+			path = Persistance;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,6 +258,9 @@
 			dependencies = (
 			);
 			name = chatOpenAi;
+			packageProductDependencies = (
+				88B281062B910508008C8046 /* MarkdownUI */,
+			);
 			productName = chatOpenAi;
 			productReference = 885272CC2B7A42DE001DC7FA /* chatOpenAi.app */;
 			productType = "com.apple.product-type.application";
@@ -220,6 +333,9 @@
 				Base,
 			);
 			mainGroup = 885272C32B7A42DE001DC7FA;
+			packageReferences = (
+				88B281052B910508008C8046 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
+			);
 			productRefGroup = 885272CD2B7A42DE001DC7FA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -262,9 +378,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88BA6CF12B89FAE80028C84A /* ViewModel.swift in Sources */,
+				88BA6CF32B8A06660028C84A /* ChatBubbleShape.swift in Sources */,
+				88BA6CFC2B8A4B450028C84A /* SwiftDataService.swift in Sources */,
+				885273092B7A71C5001DC7FA /* SettingsView.swift in Sources */,
 				885272D22B7A42DE001DC7FA /* ContentView.swift in Sources */,
+				88BA6CF52B8A068D0028C84A /* ChatBubbleView.swift in Sources */,
+				88BA6CFA2B8A4B310028C84A /* KeychainService.swift in Sources */,
+				885273062B7A612E001DC7FA /* MainView.swift in Sources */,
+				88B2810A2B910EE4008C8046 /* OpenAIResponseModel.swift in Sources */,
+				888DED6B2B8CFEEB002D16AB /* UserDefaultsService.swift in Sources */,
+				885273022B7A4DEB001DC7FA /* AppLogger.swift in Sources */,
 				885272D42B7A42DE001DC7FA /* Item.swift in Sources */,
 				885272D02B7A42DE001DC7FA /* chatOpenAiApp.swift in Sources */,
+				88BA6CF72B8A0E240028C84A /* FlippedUpsideDown.swift in Sources */,
+				885272FE2B7A4480001DC7FA /* NetwokService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,6 +715,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		88B281052B910508008C8046 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		88B281062B910508008C8046 /* MarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88B281052B910508008C8046 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
+			productName = MarkdownUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 885272C42B7A42DE001DC7FA /* Project object */;
 }
