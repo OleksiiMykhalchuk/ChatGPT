@@ -52,6 +52,8 @@ struct SettingsView: View {
                 Picker(selection: $aiModel) {
                     Text("Gpt - 3").tag(AIModel.gpt3)
                     Text("Gpt - 4").tag(AIModel.gpt4)
+                    Text("Dall-E").tag(AIModel.dalle)
+                    Text("Dall-e-2").tag(AIModel.dalle2)
                 } label: {
                     Text("Choose Model: ")
                 }.padding()

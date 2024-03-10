@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-protocol ViewModelProtocol: ObservableObject {
+protocol ViewModelProtocol {
 
     func start()
 }
@@ -24,10 +24,29 @@ final class ViewModel: ObservableObject, ViewModelProtocol {
     
     let logger = AppLogger()
 
+    var imageModel: ImageGeneratedModel?
+
     private var errorPublisher = PassthroughSubject<Int?, URLError>()
 
     func start() {
         //
+    }
+
+    func generateImage(_ prompt: String) -> AnyPublisher<Data, Error> {
+        guard let request: URLRequest = URLRequestBuilder(url: .image)?
+            .setValue(.json)
+            .setValue(.auth)
+            .setMethod(.post)
+            .setBody(prompt)
+            .build()
+        else {
+            logger.fault("URLRequest invalid")
+            return Fail<Data, Error>(error: ViewModelError.requestBuilderFailure).eraseToAnyPublisher()
+        }
+        return network
+            .getData(with: request)
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
     }
 
     func getPrompt(_ prompt: String) -> AnyPublisher<Data, Error> {
