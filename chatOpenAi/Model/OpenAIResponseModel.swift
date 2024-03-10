@@ -58,3 +58,19 @@ struct Usage: Codable {
         case totalTokens = "total_tokens"
     }
 }
+
+
+struct ImageGeneratedModel: Codable {
+    let created: Int
+    let data: [ImageData]
+}
+
+struct ImageData: Codable, Hashable {
+    let revizedPrompt: String
+    let url: String
+
+    enum CodingKeys: String, CodingKey {
+        case revizedPrompt = "revised_prompt"
+        case url
+    }
+}

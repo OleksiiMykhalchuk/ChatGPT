@@ -21,11 +21,14 @@ enum HTTPMethod: String {
 
 enum BaseURL {
     case chat
+    case image
 
     var url: URL? {
         switch self {
         case .chat:
             return .init(string: "https://api.openai.com/v1/chat/completions")
+        case .image:
+            return .init(string: "https://api.openai.com/v1/images/generations")
         }
     }
 }
@@ -33,6 +36,13 @@ enum BaseURL {
 enum AIModel: String, CaseIterable {
     case gpt4 = "gpt-4"
     case gpt3 = "gpt-3.5-turbo"
+    case dalle = "dall-e-3"
+    case dalle2 = "dall-e-2"
+}
+
+enum ImageSize: String {
+    case medium = "1024x1024"
+    case small = "256x256"
 }
 
 final class NetworkService: NetworkProvider {
@@ -109,6 +119,7 @@ final class URLRequestBuilder {
     private var request: URLRequest
 
     private let logger = AppLogger()
+    private let baseURL: BaseURL
 
     static private var apiKey: String? {
         do {
@@ -123,8 +134,10 @@ final class URLRequestBuilder {
     }
 
     init?(url: BaseURL) {
+        self.baseURL = url
         guard let url = url.url else { return nil }
         self.request = .init(url: url)
+
     }
 
     func setValue(_ value: Value) -> Self {
@@ -137,20 +150,32 @@ final class URLRequestBuilder {
         return self
     }
 
-    func setBody(_ prompt: String) -> Self {
-        let body = [
-            "model": aiModel?.rawValue ?? AIModel.gpt3.rawValue,
-            "messages": [
-                [
-                    "role": "system",
-                    "content": "You are a helpful assistant."
-                ],
-                [
-                    "role": "user",
-                    "content": prompt
+    func setBody(_ prompt: String, imageSize: ImageSize = .medium) -> Self {
+        var body: [String: Any]
+        switch baseURL {
+        case .chat:
+            body = [
+                "model": aiModel?.rawValue ?? AIModel.gpt3.rawValue,
+                "messages": [
+                    [
+                        "role": "system",
+                        "content": "You are a helpful assistant."
+                    ],
+                    [
+                        "role": "user",
+                        "content": prompt
+                    ]
                 ]
+            ] as [String : Any]
+        case .image:
+            body = [
+                "model": aiModel?.rawValue ?? AIModel.gpt3.rawValue,
+                "prompt": prompt,
+                "n": 1,
+                "size": imageSize.rawValue
             ]
-        ] as [String : Any]
+        }
+
         request.httpBody = try? JSONSerialization.data(withJSONObject: body)
         return self
     }

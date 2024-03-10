@@ -86,7 +86,25 @@ struct MainView: View {
                                                     Text("Copy")
                                                 }
                                             })
+
                                     }.flippedUpsideDown()
+                                    if let image = viewModel.imageModel?.data {
+                                        ChatBubble(direction: .left) {
+                                            List(image, id: \.url) { element in
+                                                AsyncImage(url: URL(string: element.url), content: { image in
+                                                    image
+                                                        .resizable()
+                                                        .aspectRatio(contentMode: .fit)
+                                                        .frame(width: 256, height: 256, alignment: .center)
+
+                                                }, placeholder: {
+                                                    ProgressView()
+                                                })
+                                            }
+                                        }
+                                        .flippedUpsideDown()
+                                        .frame(width: 356, height: 256, alignment: .leading)
+                                    }
                                 }
 
                             }
@@ -166,20 +184,42 @@ struct MainView: View {
         if !message.isEmpty {
             isMessageLoading = true
             messages.insert(OpenAIResponseModel(id: UUID().uuidString, object: "", created: Int(Date().timeIntervalSince1970), model: viewModel.getGPTModel() ?? "unknown", choices: [ChoiceModel(index: 0, message: Message(role: "user", content: message))], usage: Usage(promptTokens: 0, completionTokens: 0, totalTokens: 0)), at: 0)
-            viewModel
-                .getPrompt(message)
-                .decode(type: OpenAIResponseModel.self, decoder: JSONDecoder())
-                .sink { completion in
-                    switch completion {
-                    case .finished:
-                        viewModel.logger.info("getPrompt Finished")
-                        isMessageLoading = false
-                    case .failure(let error):
-                        viewModel.logger.fault("\(error)")
-                    }
-                } receiveValue: { value in
-                    messages.insert(value, at: 0)
-                }.store(in: &subscriptions)
+            if viewModel.getGPTModel() == AIModel.dalle.rawValue {
+                viewModel
+                    .generateImage(message)
+                    .decode(type: ImageGeneratedModel.self, decoder: JSONDecoder())
+                    .sink { completion in
+                        switch completion {
+                        case .finished:
+                            viewModel.logger.info("getPrompt Finished")
+                            isMessageLoading = false
+                        case .failure(let error):
+                            viewModel.logger.fault("\(error)")
+                        }
+                    } receiveValue: { value in
+                        messages.insert(OpenAIResponseModel(id: UUID().uuidString, object: "", created: Int(Date().timeIntervalSince1970), model: viewModel.getGPTModel() ?? "unknown", choices: [ChoiceModel(index: 0, message: Message(role: "assistant", content: value.data.map { $0.revizedPrompt }.joined(separator: "\n")))], usage: Usage(promptTokens: 0, completionTokens: 0, totalTokens: 0)), at: 0)
+                        viewModel.imageModel = value
+                    }.store(in: &subscriptions)
+//                messages.insert(OpenAIResponseModel(id: UUID().uuidString, object: "", created: Int(Date().timeIntervalSince1970), model: viewModel.getGPTModel() ?? "unknown", choices: [ChoiceModel(index: 0, message: Message(role: "assistant", content: "Picture"))], usage: Usage(promptTokens: 0, completionTokens: 0, totalTokens: 0)), at: 0)
+//                viewModel.imageModel = ImageGeneratedModel(created: 1, data: [ImageData(revizedPrompt: "Prompt", url: "https://oaidalleapiprodscus.blob.core.windows.net/private/org-RvgT4ucvKmPdvU8dSTJrnUcd/user-hwjgy67dlklvojD1c7r3NKnF/img-PzLbVjFzrC2nFXm34f3arj1l.png?st=2024-03-10T11%3A10%3A50Z&se=2024-03-10T13%3A10%3A50Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-03-09T18%3A23%3A05Z&ske=2024-03-10T18%3A23%3A05Z&sks=b&skv=2021-08-06&sig=EfSTDCBPUF/2nld78ZX5RCqhPf/bBQC6OjQeRjnc1vQ%3D")])
+//                isMessageLoading = false
+            } else {
+                viewModel
+                    .getPrompt(message)
+                    .decode(type: OpenAIResponseModel.self, decoder: JSONDecoder())
+                    .sink { completion in
+                        switch completion {
+                        case .finished:
+                            viewModel.logger.info("getPrompt Finished")
+                            isMessageLoading = false
+                        case .failure(let error):
+                            viewModel.logger.fault("\(error)")
+                        }
+                    } receiveValue: { value in
+                        messages.insert(value, at: 0)
+                    }.store(in: &subscriptions)
+
+            }
             message = ""
         }
     }
