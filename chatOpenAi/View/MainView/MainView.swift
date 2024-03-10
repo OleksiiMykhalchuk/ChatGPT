@@ -103,7 +103,7 @@ struct MainView: View {
                                             }
                                         }
                                         .flippedUpsideDown()
-                                        .frame(width: 356, height: 256, alignment: .center)
+                                        .frame(width: 356, height: 256, alignment: .leading)
                                     }
                                 }
 
