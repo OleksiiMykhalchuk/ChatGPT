@@ -25,7 +25,7 @@ struct chatOpenAiApp: App {
 
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            DataModel.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 

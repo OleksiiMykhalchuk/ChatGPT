@@ -25,7 +25,7 @@ enum Category: String {
     case defaultCategory
 }
 
-struct AppLogger: LoggerProtocol {
+public struct AppLogger: LoggerProtocol {
 
     private let logger: Logger
 

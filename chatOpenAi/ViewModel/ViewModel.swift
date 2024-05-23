@@ -13,7 +13,8 @@ protocol ViewModelProtocol {
     func start()
 }
 
-final class ViewModel: ObservableObject, ViewModelProtocol {
+@Observable
+final class ViewModel: ViewModelProtocol {
 
     enum ViewModelError: Error {
         case requestBuilderFailure
@@ -27,17 +28,27 @@ final class ViewModel: ObservableObject, ViewModelProtocol {
     var imageModel: ImageGeneratedModel?
 
     private var errorPublisher = PassthroughSubject<Int?, URLError>()
+    private var model: String? {
+        getGPTModel()
+    }
+
+    var messages: [OpenAIResponseModel] = []
 
     func start() {
         //
     }
 
     func generateImage(_ prompt: String) -> AnyPublisher<Data, Error> {
+        let body = ImageGenerationBodyModel(
+            model: model ?? AIModel.dalle.rawValue,
+            prompt: prompt,
+            count: 1,
+            size: ImageSize.medium.rawValue)
         guard let request: URLRequest = URLRequestBuilder(url: .image)?
             .setValue(.json)
             .setValue(.auth)
             .setMethod(.post)
-            .setBody(prompt)
+            .setBody(body)
             .build()
         else {
             logger.fault("URLRequest invalid")
@@ -50,16 +61,35 @@ final class ViewModel: ObservableObject, ViewModelProtocol {
     }
 
     func getPrompt(_ prompt: String) -> AnyPublisher<Data, Error> {
+        let history = messages.compactMap { model -> Message in
+            Message(role: model.getRole(), content: model.getContent())
+        }
+        var body = BodyModel(
+            model: model ?? AIModel.gpt3.rawValue,
+            messages: [
+                Message(role: "system",
+                        content: "You are helpfull assistant")
+            ])
+        body.messages.append(contentsOf: history.reversed())
         guard let request: URLRequest = URLRequestBuilder(url: .chat)?
             .setValue(.json)
             .setValue(.auth)
             .setMethod(.post)
-            .setBody(prompt)
+            .setBody(body)
             .build()
         else {
             logger.fault("URLRequest invalid")
             return Fail<Data, Error>(error: ViewModelError.requestBuilderFailure).eraseToAnyPublisher()
         }
+        return network
+            .getData(with: request)
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
+    }
+
+    func getTextGoogleCloud(_ prompt: String) throws -> AnyPublisher<Data, Error> {
+        let googleCloudService = GoogleCloudService()
+        let request = try googleCloudService.userRoleRequest(prompt)
         return network
             .getData(with: request)
             .receive(on: DispatchQueue.main)

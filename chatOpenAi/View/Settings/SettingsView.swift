@@ -9,9 +9,9 @@ import SwiftUI
 import Security
 import Combine
 
-struct SettingsView: View {
+public struct SettingsView: View {
 
-    @EnvironmentObject var viewModel: ViewModel
+    @Environment(ViewModel.self) var viewModel: ViewModel
 
     private let keychainService = KeychainService()
 
@@ -33,8 +33,9 @@ struct SettingsView: View {
 
     @State private var verifyMessage: String = ""
     @State private var isAnimating: Bool = false
+    @State private var textSize: String = "\(ThemeManager.textSize)"
 
-    var body: some View {
+    public var body: some View {
         NavigationStack {
             VStack {
                 Group {
@@ -61,6 +62,15 @@ struct SettingsView: View {
                     .onChange(of: aiModel) { _, newValue in
                         viewModel.saveGPTModel(newValue.rawValue)
                     }
+                HStack {
+                    Text("Text Size: ")
+                        .padding()
+                    TextField("Message Text Size", text: $textSize)
+                        .onChange(of: textSize) { _, newValue in
+                            ThemeManager.textSize = Float(newValue)
+                        }
+                        .padding()
+                }
 
                 HStack {
                     Text("Open AI API Key: ")
@@ -124,6 +134,7 @@ struct SettingsView: View {
             .onAppear {
                 aiModel = AIModel(rawValue: viewModel.getGPTModel() ?? "") ?? .gpt3
                 viewModel.saveGPTModel(aiModel.rawValue)
+                textSize = "\(ThemeManager.textSize ?? 12.0)"
             }
             .alert("Error", isPresented: $isError) {
                 Button("OK") {
@@ -183,11 +194,11 @@ struct SettingsView: View {
 extension String {
     static let storeApiKey = "storeApiKey"
 }
-
-#Preview {
-    SettingsView(isPresented: .init(get: {
-        true
-    }, set: { value in
-        //
-    }))
-}
+//
+//#Preview {
+//    SettingsView(isPresented: .init(get: {
+//        true
+//    }, set: { value in
+//        //
+//    }))
+//}

@@ -14,6 +14,7 @@ final class UserDefaultsService {
     enum Keys: String {
         case gptModel
         case asistant
+        case textSize
     }
 
     func saveObject(_ object: Any, _ forKey: Keys) {

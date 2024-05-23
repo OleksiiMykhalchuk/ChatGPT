@@ -34,7 +34,7 @@ enum BaseURL {
 }
 
 enum AIModel: String, CaseIterable {
-    case gpt4 = "gpt-4"
+    case gpt4 = "gpt-4-0125-preview"
     case gpt3 = "gpt-3.5-turbo"
     case dalle = "dall-e-3"
     case dalle2 = "dall-e-2"
@@ -45,7 +45,7 @@ enum ImageSize: String {
     case small = "256x256"
 }
 
-final class NetworkService: NetworkProvider {
+public final class NetworkService: NetworkProvider {
 
     private let session: URLSession
 
@@ -150,33 +150,8 @@ final class URLRequestBuilder {
         return self
     }
 
-    func setBody(_ prompt: String, imageSize: ImageSize = .medium) -> Self {
-        var body: [String: Any]
-        switch baseURL {
-        case .chat:
-            body = [
-                "model": aiModel?.rawValue ?? AIModel.gpt3.rawValue,
-                "messages": [
-                    [
-                        "role": "system",
-                        "content": "You are a helpful assistant."
-                    ],
-                    [
-                        "role": "user",
-                        "content": prompt
-                    ]
-                ]
-            ] as [String : Any]
-        case .image:
-            body = [
-                "model": aiModel?.rawValue ?? AIModel.gpt3.rawValue,
-                "prompt": prompt,
-                "n": 1,
-                "size": imageSize.rawValue
-            ]
-        }
-
-        request.httpBody = try? JSONSerialization.data(withJSONObject: body)
+    func setBody(_ bodyModel: Encodable) -> Self {
+        request.httpBody = try? JSONEncoder().encode(bodyModel)
         return self
     }
 
