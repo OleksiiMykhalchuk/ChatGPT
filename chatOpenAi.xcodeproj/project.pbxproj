@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		880674A62BCE912F000C9C19 /* BodyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880674A52BCE912F000C9C19 /* BodyModel.swift */; };
+		8807548C2BBEAF6B001A0B95 /* ImageScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8807548B2BBEAF6B001A0B95 /* ImageScreen.swift */; };
 		885272D02B7A42DE001DC7FA /* chatOpenAiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885272CF2B7A42DE001DC7FA /* chatOpenAiApp.swift */; };
 		885272D22B7A42DE001DC7FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885272D12B7A42DE001DC7FA /* ContentView.swift */; };
 		885272D42B7A42DE001DC7FA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885272D32B7A42DE001DC7FA /* Item.swift */; };
@@ -19,15 +21,36 @@
 		885273022B7A4DEB001DC7FA /* AppLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885273012B7A4DEB001DC7FA /* AppLogger.swift */; };
 		885273062B7A612E001DC7FA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885273052B7A612E001DC7FA /* MainView.swift */; };
 		885273092B7A71C5001DC7FA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885273082B7A71C5001DC7FA /* SettingsView.swift */; };
+		886C46042BDC179600411658 /* GoogleCloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C46032BDC179600411658 /* GoogleCloudService.swift */; };
 		888DED6B2B8CFEEB002D16AB /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888DED6A2B8CFEEB002D16AB /* UserDefaultsService.swift */; };
 		88B281072B910508008C8046 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 88B281062B910508008C8046 /* MarkdownUI */; };
 		88B2810A2B910EE4008C8046 /* OpenAIResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B281092B910EE4008C8046 /* OpenAIResponseModel.swift */; };
+		88B47AE42BA02176007414CA /* chatOpenAIMobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B47AE32BA02176007414CA /* chatOpenAIMobile.swift */; };
+		88B47AEE2BA02176007414CA /* chatOpenAIMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88B47AEC2BA02176007414CA /* chatOpenAIMobile.xcdatamodeld */; };
+		88B47AF02BA02177007414CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B47AEF2BA02177007414CA /* Assets.xcassets */; };
+		88B47AFE2BA02177007414CA /* chatOpenAIMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B47AFD2BA02177007414CA /* chatOpenAIMobileTests.swift */; };
+		88B47B082BA02177007414CA /* chatOpenAIMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B47B072BA02177007414CA /* chatOpenAIMobileUITests.swift */; };
+		88B47B0A2BA02177007414CA /* chatOpenAIMobileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B47B092BA02177007414CA /* chatOpenAIMobileUITestsLaunchTests.swift */; };
+		88B47B182BA0259D007414CA /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 88B47B172BA0259D007414CA /* MarkdownUI */; };
+		88B47B1A2BA025D5007414CA /* AppLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885273012B7A4DEB001DC7FA /* AppLogger.swift */; };
+		88B47B1B2BA025DB007414CA /* NetwokService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885272FD2B7A4480001DC7FA /* NetwokService.swift */; };
+		88B47B1C2BA02614007414CA /* OpenAIResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B281092B910EE4008C8046 /* OpenAIResponseModel.swift */; };
+		88B47B1D2BA02631007414CA /* ChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA6CF42B8A068D0028C84A /* ChatBubbleView.swift */; };
+		88B47B1E2BA02641007414CA /* ChatBubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA6CF22B8A06660028C84A /* ChatBubbleShape.swift */; };
+		88B47B1F2BA026EC007414CA /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA6CF92B8A4B310028C84A /* KeychainService.swift */; };
+		88B47B202BA026F9007414CA /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888DED6A2B8CFEEB002D16AB /* UserDefaultsService.swift */; };
+		88B47B212BA02712007414CA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA6CF02B89FAE80028C84A /* ViewModel.swift */; };
+		88B47B252BA02779007414CA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B47B242BA02779007414CA /* MainView.swift */; };
+		88B47B282BA027EA007414CA /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B47B272BA027EA007414CA /* ChatView.swift */; };
+		88B47B2B2BA02804007414CA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B47B2A2BA02804007414CA /* SettingsView.swift */; };
 		88BA6CF12B89FAE80028C84A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA6CF02B89FAE80028C84A /* ViewModel.swift */; };
 		88BA6CF32B8A06660028C84A /* ChatBubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA6CF22B8A06660028C84A /* ChatBubbleShape.swift */; };
 		88BA6CF52B8A068D0028C84A /* ChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA6CF42B8A068D0028C84A /* ChatBubbleView.swift */; };
 		88BA6CF72B8A0E240028C84A /* FlippedUpsideDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA6CF62B8A0E240028C84A /* FlippedUpsideDown.swift */; };
 		88BA6CFA2B8A4B310028C84A /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA6CF92B8A4B310028C84A /* KeychainService.swift */; };
 		88BA6CFC2B8A4B450028C84A /* SwiftDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA6CFB2B8A4B450028C84A /* SwiftDataService.swift */; };
+		88BF572B2BBD95200096C883 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF572A2BBD95200096C883 /* DataModel.swift */; };
+		88EBE1832BB7138700F7EEFD /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBE1822BB7138700F7EEFD /* ThemeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,9 +68,25 @@
 			remoteGlobalIDString = 885272CB2B7A42DE001DC7FA;
 			remoteInfo = chatOpenAi;
 		};
+		88B47AFA2BA02177007414CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 885272C42B7A42DE001DC7FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88B47AE02BA02176007414CA;
+			remoteInfo = chatOpenAIMobile;
+		};
+		88B47B042BA02177007414CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 885272C42B7A42DE001DC7FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88B47AE02BA02176007414CA;
+			remoteInfo = chatOpenAIMobile;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		880674A52BCE912F000C9C19 /* BodyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyModel.swift; sourceTree = "<group>"; };
+		8807548B2BBEAF6B001A0B95 /* ImageScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScreen.swift; sourceTree = "<group>"; };
 		885272CC2B7A42DE001DC7FA /* chatOpenAi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatOpenAi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		885272CF2B7A42DE001DC7FA /* chatOpenAiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatOpenAiApp.swift; sourceTree = "<group>"; };
 		885272D12B7A42DE001DC7FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,14 +103,30 @@
 		885273012B7A4DEB001DC7FA /* AppLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogger.swift; sourceTree = "<group>"; };
 		885273052B7A612E001DC7FA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		885273082B7A71C5001DC7FA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		886C46032BDC179600411658 /* GoogleCloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleCloudService.swift; sourceTree = "<group>"; };
 		888DED6A2B8CFEEB002D16AB /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		88B281092B910EE4008C8046 /* OpenAIResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIResponseModel.swift; sourceTree = "<group>"; };
+		88B47AE12BA02176007414CA /* chatOpenAIMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatOpenAIMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88B47AE32BA02176007414CA /* chatOpenAIMobile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatOpenAIMobile.swift; sourceTree = "<group>"; };
+		88B47AED2BA02176007414CA /* chatOpenAIMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = chatOpenAIMobile.xcdatamodel; sourceTree = "<group>"; };
+		88B47AEF2BA02177007414CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		88B47AF42BA02177007414CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88B47AF92BA02177007414CA /* chatOpenAIMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chatOpenAIMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		88B47AFD2BA02177007414CA /* chatOpenAIMobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatOpenAIMobileTests.swift; sourceTree = "<group>"; };
+		88B47B032BA02177007414CA /* chatOpenAIMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chatOpenAIMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		88B47B072BA02177007414CA /* chatOpenAIMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatOpenAIMobileUITests.swift; sourceTree = "<group>"; };
+		88B47B092BA02177007414CA /* chatOpenAIMobileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatOpenAIMobileUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		88B47B242BA02779007414CA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		88B47B272BA027EA007414CA /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		88B47B2A2BA02804007414CA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		88BA6CF02B89FAE80028C84A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		88BA6CF22B8A06660028C84A /* ChatBubbleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleShape.swift; sourceTree = "<group>"; };
 		88BA6CF42B8A068D0028C84A /* ChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleView.swift; sourceTree = "<group>"; };
 		88BA6CF62B8A0E240028C84A /* FlippedUpsideDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippedUpsideDown.swift; sourceTree = "<group>"; };
 		88BA6CF92B8A4B310028C84A /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		88BA6CFB2B8A4B450028C84A /* SwiftDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataService.swift; sourceTree = "<group>"; };
+		88BF572A2BBD95200096C883 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		88EBE1822BB7138700F7EEFD /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +152,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		88B47ADE2BA02176007414CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88B47B182BA0259D007414CA /* MarkdownUI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88B47AF62BA02177007414CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88B47B002BA02177007414CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -106,7 +183,11 @@
 				885272CE2B7A42DE001DC7FA /* chatOpenAi */,
 				885272E22B7A42DF001DC7FA /* chatOpenAiTests */,
 				885272EC2B7A42DF001DC7FA /* chatOpenAiUITests */,
+				88B47AE22BA02176007414CA /* chatOpenAIMobile */,
+				88B47AFC2BA02177007414CA /* chatOpenAIMobileTests */,
+				88B47B062BA02177007414CA /* chatOpenAIMobileUITests */,
 				885272CD2B7A42DE001DC7FA /* Products */,
+				88B47B162BA0259D007414CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +197,9 @@
 				885272CC2B7A42DE001DC7FA /* chatOpenAi.app */,
 				885272DF2B7A42DF001DC7FA /* chatOpenAiTests.xctest */,
 				885272E92B7A42DF001DC7FA /* chatOpenAiUITests.xctest */,
+				88B47AE12BA02176007414CA /* chatOpenAIMobile.app */,
+				88B47AF92BA02177007414CA /* chatOpenAIMobileTests.xctest */,
+				88B47B032BA02177007414CA /* chatOpenAIMobileUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				885272FD2B7A4480001DC7FA /* NetwokService.swift */,
+				886C46032BDC179600411658 /* GoogleCloudService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -175,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				885273012B7A4DEB001DC7FA /* AppLogger.swift */,
+				88EBE1822BB7138700F7EEFD /* ThemeManager.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -195,6 +281,7 @@
 				88BA6CF62B8A0E240028C84A /* FlippedUpsideDown.swift */,
 				88BA6CF22B8A06660028C84A /* ChatBubbleShape.swift */,
 				88BA6CF42B8A068D0028C84A /* ChatBubbleView.swift */,
+				8807548B2BBEAF6B001A0B95 /* ImageScreen.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -211,6 +298,8 @@
 			isa = PBXGroup;
 			children = (
 				88B281092B910EE4008C8046 /* OpenAIResponseModel.swift */,
+				88BF572A2BBD95200096C883 /* DataModel.swift */,
+				880674A52BCE912F000C9C19 /* BodyModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -222,6 +311,76 @@
 				885272D32B7A42DE001DC7FA /* Item.swift */,
 			);
 			path = temp;
+			sourceTree = "<group>";
+		};
+		88B47AE22BA02176007414CA /* chatOpenAIMobile */ = {
+			isa = PBXGroup;
+			children = (
+				88B47B222BA0274F007414CA /* View */,
+				88B47AE32BA02176007414CA /* chatOpenAIMobile.swift */,
+				88B47AEF2BA02177007414CA /* Assets.xcassets */,
+				88B47AF42BA02177007414CA /* Info.plist */,
+				88B47AEC2BA02176007414CA /* chatOpenAIMobile.xcdatamodeld */,
+			);
+			path = chatOpenAIMobile;
+			sourceTree = "<group>";
+		};
+		88B47AFC2BA02177007414CA /* chatOpenAIMobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				88B47AFD2BA02177007414CA /* chatOpenAIMobileTests.swift */,
+			);
+			path = chatOpenAIMobileTests;
+			sourceTree = "<group>";
+		};
+		88B47B062BA02177007414CA /* chatOpenAIMobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				88B47B072BA02177007414CA /* chatOpenAIMobileUITests.swift */,
+				88B47B092BA02177007414CA /* chatOpenAIMobileUITestsLaunchTests.swift */,
+			);
+			path = chatOpenAIMobileUITests;
+			sourceTree = "<group>";
+		};
+		88B47B162BA0259D007414CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		88B47B222BA0274F007414CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88B47B292BA027F0007414CA /* Settings */,
+				88B47B262BA027D8007414CA /* Chat */,
+				88B47B232BA02764007414CA /* MainView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88B47B232BA02764007414CA /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				88B47B242BA02779007414CA /* MainView.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		88B47B262BA027D8007414CA /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				88B47B272BA027EA007414CA /* ChatView.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		88B47B292BA027F0007414CA /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				88B47B2A2BA02804007414CA /* SettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		88BA6CEF2B89FAD20028C84A /* ViewModel */ = {
@@ -301,6 +460,62 @@
 			productReference = 885272E92B7A42DF001DC7FA /* chatOpenAiUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		88B47AE02BA02176007414CA /* chatOpenAIMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88B47B112BA02177007414CA /* Build configuration list for PBXNativeTarget "chatOpenAIMobile" */;
+			buildPhases = (
+				88B47ADD2BA02176007414CA /* Sources */,
+				88B47ADE2BA02176007414CA /* Frameworks */,
+				88B47ADF2BA02176007414CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = chatOpenAIMobile;
+			packageProductDependencies = (
+				88B47B172BA0259D007414CA /* MarkdownUI */,
+			);
+			productName = chatOpenAIMobile;
+			productReference = 88B47AE12BA02176007414CA /* chatOpenAIMobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		88B47AF82BA02177007414CA /* chatOpenAIMobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88B47B122BA02177007414CA /* Build configuration list for PBXNativeTarget "chatOpenAIMobileTests" */;
+			buildPhases = (
+				88B47AF52BA02177007414CA /* Sources */,
+				88B47AF62BA02177007414CA /* Frameworks */,
+				88B47AF72BA02177007414CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88B47AFB2BA02177007414CA /* PBXTargetDependency */,
+			);
+			name = chatOpenAIMobileTests;
+			productName = chatOpenAIMobileTests;
+			productReference = 88B47AF92BA02177007414CA /* chatOpenAIMobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		88B47B022BA02177007414CA /* chatOpenAIMobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88B47B132BA02177007414CA /* Build configuration list for PBXNativeTarget "chatOpenAIMobileUITests" */;
+			buildPhases = (
+				88B47AFF2BA02177007414CA /* Sources */,
+				88B47B002BA02177007414CA /* Frameworks */,
+				88B47B012BA02177007414CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88B47B052BA02177007414CA /* PBXTargetDependency */,
+			);
+			name = chatOpenAIMobileUITests;
+			productName = chatOpenAIMobileUITests;
+			productReference = 88B47B032BA02177007414CA /* chatOpenAIMobileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -321,6 +536,17 @@
 					885272E82B7A42DF001DC7FA = {
 						CreatedOnToolsVersion = 15.2;
 						TestTargetID = 885272CB2B7A42DE001DC7FA;
+					};
+					88B47AE02BA02176007414CA = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					88B47AF82BA02177007414CA = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 88B47AE02BA02176007414CA;
+					};
+					88B47B022BA02177007414CA = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 88B47AE02BA02176007414CA;
 					};
 				};
 			};
@@ -343,6 +569,9 @@
 				885272CB2B7A42DE001DC7FA /* chatOpenAi */,
 				885272DE2B7A42DF001DC7FA /* chatOpenAiTests */,
 				885272E82B7A42DF001DC7FA /* chatOpenAiUITests */,
+				88B47AE02BA02176007414CA /* chatOpenAIMobile */,
+				88B47AF82BA02177007414CA /* chatOpenAIMobileTests */,
+				88B47B022BA02177007414CA /* chatOpenAIMobileUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -371,6 +600,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		88B47ADF2BA02176007414CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88B47AF02BA02177007414CA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88B47AF72BA02177007414CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88B47B012BA02177007414CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -378,19 +629,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				886C46042BDC179600411658 /* GoogleCloudService.swift in Sources */,
 				88BA6CF12B89FAE80028C84A /* ViewModel.swift in Sources */,
 				88BA6CF32B8A06660028C84A /* ChatBubbleShape.swift in Sources */,
+				880674A62BCE912F000C9C19 /* BodyModel.swift in Sources */,
 				88BA6CFC2B8A4B450028C84A /* SwiftDataService.swift in Sources */,
 				885273092B7A71C5001DC7FA /* SettingsView.swift in Sources */,
 				885272D22B7A42DE001DC7FA /* ContentView.swift in Sources */,
+				8807548C2BBEAF6B001A0B95 /* ImageScreen.swift in Sources */,
 				88BA6CF52B8A068D0028C84A /* ChatBubbleView.swift in Sources */,
 				88BA6CFA2B8A4B310028C84A /* KeychainService.swift in Sources */,
 				885273062B7A612E001DC7FA /* MainView.swift in Sources */,
 				88B2810A2B910EE4008C8046 /* OpenAIResponseModel.swift in Sources */,
 				888DED6B2B8CFEEB002D16AB /* UserDefaultsService.swift in Sources */,
 				885273022B7A4DEB001DC7FA /* AppLogger.swift in Sources */,
+				88EBE1832BB7138700F7EEFD /* ThemeManager.swift in Sources */,
 				885272D42B7A42DE001DC7FA /* Item.swift in Sources */,
 				885272D02B7A42DE001DC7FA /* chatOpenAiApp.swift in Sources */,
+				88BF572B2BBD95200096C883 /* DataModel.swift in Sources */,
 				88BA6CF72B8A0E240028C84A /* FlippedUpsideDown.swift in Sources */,
 				885272FE2B7A4480001DC7FA /* NetwokService.swift in Sources */,
 			);
@@ -413,6 +669,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		88B47ADD2BA02176007414CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88B47AEE2BA02176007414CA /* chatOpenAIMobile.xcdatamodeld in Sources */,
+				88B47B1E2BA02641007414CA /* ChatBubbleShape.swift in Sources */,
+				88B47B202BA026F9007414CA /* UserDefaultsService.swift in Sources */,
+				88B47B212BA02712007414CA /* ViewModel.swift in Sources */,
+				88B47B282BA027EA007414CA /* ChatView.swift in Sources */,
+				88B47B1A2BA025D5007414CA /* AppLogger.swift in Sources */,
+				88B47B1C2BA02614007414CA /* OpenAIResponseModel.swift in Sources */,
+				88B47B1F2BA026EC007414CA /* KeychainService.swift in Sources */,
+				88B47B252BA02779007414CA /* MainView.swift in Sources */,
+				88B47AE42BA02176007414CA /* chatOpenAIMobile.swift in Sources */,
+				88B47B1D2BA02631007414CA /* ChatBubbleView.swift in Sources */,
+				88B47B1B2BA025DB007414CA /* NetwokService.swift in Sources */,
+				88B47B2B2BA02804007414CA /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88B47AF52BA02177007414CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88B47AFE2BA02177007414CA /* chatOpenAIMobileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88B47AFF2BA02177007414CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88B47B0A2BA02177007414CA /* chatOpenAIMobileUITestsLaunchTests.swift in Sources */,
+				88B47B082BA02177007414CA /* chatOpenAIMobileUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -425,6 +718,16 @@
 			isa = PBXTargetDependency;
 			target = 885272CB2B7A42DE001DC7FA /* chatOpenAi */;
 			targetProxy = 885272EA2B7A42DF001DC7FA /* PBXContainerItemProxy */;
+		};
+		88B47AFB2BA02177007414CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88B47AE02BA02176007414CA /* chatOpenAIMobile */;
+			targetProxy = 88B47AFA2BA02177007414CA /* PBXContainerItemProxy */;
+		};
+		88B47B052BA02177007414CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88B47AE02BA02176007414CA /* chatOpenAIMobile */;
+			targetProxy = 88B47B042BA02177007414CA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -675,6 +978,151 @@
 			};
 			name = Release;
 		};
+		88B47B0B2BA02177007414CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 48ZGK5S53A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = chatOpenAIMobile/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.oleksi.chatOpenAIMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		88B47B0C2BA02177007414CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 48ZGK5S53A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = chatOpenAIMobile/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.oleksi.chatOpenAIMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88B47B0D2BA02177007414CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 48ZGK5S53A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.oleksi.chatOpenAIMobileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chatOpenAIMobile.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/chatOpenAIMobile";
+			};
+			name = Debug;
+		};
+		88B47B0E2BA02177007414CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 48ZGK5S53A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.oleksi.chatOpenAIMobileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chatOpenAIMobile.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/chatOpenAIMobile";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88B47B0F2BA02177007414CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 48ZGK5S53A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.oleksi.chatOpenAIMobileUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = chatOpenAIMobile;
+			};
+			name = Debug;
+		};
+		88B47B102BA02177007414CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 48ZGK5S53A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.oleksi.chatOpenAIMobileUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = chatOpenAIMobile;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -714,6 +1162,33 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		88B47B112BA02177007414CA /* Build configuration list for PBXNativeTarget "chatOpenAIMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88B47B0B2BA02177007414CA /* Debug */,
+				88B47B0C2BA02177007414CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88B47B122BA02177007414CA /* Build configuration list for PBXNativeTarget "chatOpenAIMobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88B47B0D2BA02177007414CA /* Debug */,
+				88B47B0E2BA02177007414CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88B47B132BA02177007414CA /* Build configuration list for PBXNativeTarget "chatOpenAIMobileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88B47B0F2BA02177007414CA /* Debug */,
+				88B47B102BA02177007414CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -733,7 +1208,25 @@
 			package = 88B281052B910508008C8046 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
 			productName = MarkdownUI;
 		};
+		88B47B172BA0259D007414CA /* MarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88B281052B910508008C8046 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
+			productName = MarkdownUI;
+		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		88B47AEC2BA02176007414CA /* chatOpenAIMobile.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				88B47AED2BA02176007414CA /* chatOpenAIMobile.xcdatamodel */,
+			);
+			currentVersion = 88B47AED2BA02176007414CA /* chatOpenAIMobile.xcdatamodel */;
+			path = chatOpenAIMobile.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 885272C42B7A42DE001DC7FA /* Project object */;
 }

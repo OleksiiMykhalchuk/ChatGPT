@@ -17,12 +17,13 @@ struct OpenAIResponseModel: Codable, Hashable {
         hasher.combine(id)
     }
 
-    let id: String
-    let object: String
-    let created: Int
-    let model: String
-    let choices: [ChoiceModel]
-    let usage: Usage
+    var id: String
+    var object: String
+    var created: Int
+    var model: String
+    var choices: [ChoiceModel]
+    var usage: Usage
+    var imageURL: String?
 
     func getContent() -> String {
         choices
@@ -38,13 +39,13 @@ struct OpenAIResponseModel: Codable, Hashable {
 }
 
 struct ChoiceModel: Codable {
-    let index: Int
-    let message: Message
+    var index: Int
+    var message: Message
 }
 
 struct Message: Codable {
-    let role: String
-    let content: String
+    var role: String
+    var content: String
 }
 
 struct Usage: Codable {
@@ -59,15 +60,15 @@ struct Usage: Codable {
     }
 }
 
-
 struct ImageGeneratedModel: Codable {
-    let created: Int
-    let data: [ImageData]
+    var created: Int
+    var data: [ImageData]
 }
 
 struct ImageData: Codable, Hashable {
-    let revizedPrompt: String
-    let url: String
+
+    var revizedPrompt: String
+    var url: String
 
     enum CodingKeys: String, CodingKey {
         case revizedPrompt = "revised_prompt"
